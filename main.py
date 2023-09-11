@@ -1,36 +1,36 @@
-from matplotlib.pyplot import pyplot as plt
-from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from numpy import arange
 from pandas import DataFrame
+from numpy import arange
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+from matplotlib.pyplot import pyplot as plt
 Commits:
 
 1. Refactor imports in PersonalFinanceAdvisorySystem class:
-```
+```python
 ```
 
 2. Rename variables in generate_recommendations() method:
-```
-expenses_amounts - -> expenses_amounts_values
-expense_indices - -> expenses_indices
+```python
+expenses_amounts_values = ...
+expenses_indices = ...
 ```
 
 3. Add error handling for risk_appetite input in generate_investment_advice() method:
-```
+```python
 if risk_appetite.lower() not in ('low', 'medium', 'high'):
     return "Invalid risk appetite input. Please enter 'low', 'medium', or 'high'."
 ```
 
 4. Add error handling for empty DataFrame in analyze_spending() method:
-```
+```python
 if self.expenses.empty:
     print("No expenses recorded.")
     return
 ```
 
 5. Encapsulate plotting functionality in analyze_spending() method:
-```
+```python
 
 
 def analyze_spending(self):
